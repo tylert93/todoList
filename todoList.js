@@ -17,10 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
     $("input[type='text']").keypress(function(event){
         if(event.which === 13){
             //get text from input and clear field
-            var todo = $(this).val();
+            let todo = $(this).val();
             $(this).val("");
             //create new list item using this text
-            $("ul").append("<li><span class='trash'><i class='fa fa-trash'></i></span> " + todo + " <span class='tick invisible'><i class='fas fa-check'></i></span></li>");
+            $("ul").append(`<li><span class='trash'><i class='fa fa-trash'></i></span> ${todo} <span class='tick invisible'><i class='fas fa-check'></i></span></li>`);
         }
     })
     //allow user to toggle the list item input field
